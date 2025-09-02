@@ -137,15 +137,23 @@
   #mobile-menu {
   opacity: 0;
   visibility: hidden;
-  display: none; /* 🔹 keep hidden by default */
+  display: none;
   transform: translateY(100%);
   transition: all 0.3s ease;
+  position: absolute; /* 🔹 makes it overlay instead of inline */
+  top: 100%; /* 🔹 sits just below navbar */
+  left: 0;
+  width: 100%;
+  background: rgba(3, 7, 18, 0.95); /* 🔹 dark glass background */
+  backdrop-filter: blur(12px); /* 🔹 frosted glass effect */
+  z-index: 40; /* 🔹 keeps it above hero section */
+  padding: 1rem 0;
 }
 
 #mobile-menu.open {
   opacity: 1;
   visibility: visible;
-  display: block; /* 🔹 show when open */
+  display: block;
   transform: translateY(0) !important;
 }
   
