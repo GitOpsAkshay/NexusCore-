@@ -137,24 +137,13 @@
   #mobile-menu {
   opacity: 0;
   visibility: hidden;
-  transform: -translate-y-full; /* slide off-screen */
   transition: all 0.3s ease-in-out;
-  position: fixed;              /* ✅ overlay whole screen */
-  inset: 0;                     /* ✅ full coverage */
-  background: rgba(3, 7, 18, 0.95);
-  backdrop-filter: blur(12px);
-  z-index: 50;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
 }
 
 #mobile-menu.open {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);     /* ✅ slide down */
+  transform: translateY(0); /* ✅ will override Tailwind -translate-y-full */
 }
   
   .nav-link-mobile {
