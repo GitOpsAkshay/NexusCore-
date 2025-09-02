@@ -135,15 +135,19 @@
   
   /* Enhanced Mobile Menu */
   #mobile-menu {
-    opacity: 0;
-    visibility: hidden;
-  }
-  
-  #mobile-menu.open {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
+  opacity: 0;
+  visibility: hidden;
+  display: none; /* 🔹 keep hidden by default */
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+#mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+  display: block; /* 🔹 show when open */
+  transform: translateY(0) !important;
+}
   
   .nav-link-mobile {
     position: relative;
