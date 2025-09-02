@@ -137,24 +137,22 @@
   #mobile-menu {
   opacity: 0;
   visibility: hidden;
-  display: none;
-  transform: translateY(100%);
+  transform: translateY(-10px);
   transition: all 0.3s ease;
-  position: absolute; /* 🔹 makes it overlay instead of inline */
-  top: 100%; /* 🔹 sits just below navbar */
+  position: absolute;         /* make it float above */
+  top: 100%;                  /* just below navbar */
   left: 0;
-  width: 100%;
-  background: rgba(3, 7, 18, 0.95); /* 🔹 dark glass background */
-  backdrop-filter: blur(12px); /* 🔹 frosted glass effect */
-  z-index: 40; /* 🔹 keeps it above hero section */
+  width: 100%;                /* full width */
+  background: rgba(3, 7, 18, 0.95); /* dark solid background */
+  backdrop-filter: blur(12px); /* glassy look */
+  z-index: 50;                /* stay above content */
   padding: 1rem 0;
 }
 
 #mobile-menu.open {
   opacity: 1;
   visibility: visible;
-  display: block;
-  transform: translateY(0) !important;
+  transform: translateY(0);
 }
   
   .nav-link-mobile {
