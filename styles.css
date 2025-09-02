@@ -137,13 +137,14 @@
   #mobile-menu {
   opacity: 0;
   visibility: hidden;
+  transform: translateY(-100%);
   transition: all 0.3s ease-in-out;
 }
 
 #mobile-menu.open {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0); /* ✅ will override Tailwind -translate-y-full */
+  transform: translateY(0);
 }
   
   .nav-link-mobile {
