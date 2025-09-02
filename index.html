@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusCore - Advanced AI Solutions</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="relative">
+  <!-- Neural Background (Full Page) -->
+  <div class="neural-bg fixed inset-0" id="neural-network"></div>
+
+  <!-- Enhanced Navigation -->
+  <nav class="fixed w-full z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <div class="w-10 h-10 hexagon bg-gradient-to-br from-primary to-secondary p-1.5">
+          <img src="assets/logo.png" alt="NexusCore Logo" class="object-contain w-full h-full brightness-150">
+        </div>
+        <span class="text-xl sm:text-2xl font-bold gradient-text">NexusCore</span>
+      </div>
+      
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="#solutions" class="nav-link">Solutions</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#technology" class="nav-link">Technology</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <button class="btn-primary">Get Started</button>
+      </div>
+      
+      <!-- Enhanced Mobile Menu Toggle -->
+      <button 
+        id="menu-toggle"
+        class="md:hidden relative z-50 w-10 h-10 focus:outline-none"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <div class="absolute w-6 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
+          <span id="bar1" class="absolute h-0.5 w-6 bg-white transform transition duration-300 ease-in-out"></span>
+          <span id="bar2" class="absolute h-0.5 w-6 bg-white transform transition duration-300 ease-in-out mt-2"></span>
+          <span id="bar3" class="absolute h-0.5 w-6 bg-white transform transition duration-300 ease-in-out mt-4"></span>
+        </div>
+      </button>
+    </div>
+    
+    <!-- Enhanced Mobile Menu -->
+    <div 
+      id="mobile-menu"
+      class="fixed inset-0 z-40 hidden bg-background/95 backdrop-blur-lg transition-all duration-300 ease-in-out transform translate-y-full"
+    >
+      <div class="absolute top-24 left-0 right-0 flex flex-col items-center justify-center h-[calc(100vh-6rem)] px-4 py-8 space-y-8 overflow-y-auto">
+        <a href="#solutions" class="nav-link-mobile text-2xl" data-aos="fade-up">Solutions</a>
+        <a href="#about" class="nav-link-mobile text-2xl" data-aos="fade-up" data-aos-delay="50">About</a>
+        <a href="#technology" class="nav-link-mobile text-2xl" data-aos="fade-up" data-aos-delay="100">Technology</a>
+        <a href="#contact" class="nav-link-mobile text-2xl" data-aos="fade-up" data-aos-delay="150">Contact</a>
+        <button class="btn-gradient mt-8 text-xl px-8 py-3" data-aos="fade-up" data-aos-delay="200">Get Started</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[90vh] flex items-center justify-center pt-24 sm:pt-32 pb-8 z-10 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto w-full text-center">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight" data-aos="fade-up">
+        Pioneering the Future of<br><span class="gradient-text">Artificial Intelligence</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-8 px-4" data-aos="fade-up" data-aos-delay="100">
+        Transforming businesses through cutting-edge AI solutions, advanced machine learning, and innovative neural network architectures.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4 px-4" data-aos="fade-up" data-aos-delay="200">
+        <button class="btn-gradient">Explore Solutions</button>
+        <button class="btn-outline">Schedule Demo</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 sm:py-24 relative z-10 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto w-full text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-12 gradient-text" data-aos="fade-up">About NexusCore</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div class="feature-card p-6" data-aos="fade-up">
+          <h3 class="text-xl font-semibold mb-4">Our Vision</h3>
+          <p class="text-gray-400">To pioneer a future where AI enhances human potential and solves global challenges.</p>
+        </div>
+        <div class="feature-card p-6" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-xl font-semibold mb-4">Our Mission</h3>
+          <p class="text-gray-400">To deliver transformative AI solutions with ethical standards and innovation.</p>
+        </div>
+        <div class="feature-card p-6" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-xl font-semibold mb-4">Our Values</h3>
+          <p class="text-gray-400">Innovation, integrity, and impact through responsible AI development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions Section -->
+  <section id="solutions" class="py-16 sm:py-24 bg-surface relative z-10 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto w-full text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-10 gradient-text" data-aos="fade-up">Advanced AI Solutions</h2>
+      <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-12 px-4" data-aos="fade-up" data-aos-delay="100">
+        Harness the power of artificial intelligence with our comprehensive suite of solutions.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div class="feature-card p-6" data-aos="fade-up">
+          <div class="service-icon"><img src="https://cdn-icons-png.flaticon.com/128/2103/2103633.png" alt="Neural Networks"></div>
+          <h3 class="text-lg sm:text-xl font-semibold mb-4">Neural Networks</h3>
+          <p class="text-gray-400">Custom-built architectures like transformers and CNNs.</p>
+        </div>
+        <div class="feature-card p-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon"><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/predictive-analytics-2355548-1966778.png" alt="Predictive Analytics"></div>
+          <h3 class="text-lg sm:text-xl font-semibold mb-4">Predictive Analytics</h3>
+          <p class="text-gray-400">ML-powered forecasting and optimization.</p>
+        </div>
+        <div class="feature-card p-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon"><img src="https://cdn-icons-png.freepik.com/256/18314/18314664.png" alt="Natural Language AI"></div>
+          <h3 class="text-lg sm:text-xl font-semibold mb-4">Natural Language AI</h3>
+          <p class="text-gray-400">Advanced models for communication and analysis.</p>
+        </div>
+        <div class="feature-card p-6" data-aos="fade-up">
+          <div class="service-icon"><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/computer-vision-10260236-8288574.png" alt="Computer Vision"></div>
+          <h3 class="text-lg sm:text-xl font-semibold mb-4">Computer Vision</h3>
+          <p class="text-gray-400">Deep learning for image and video analysis.</p>
+        </div>
+        <div class="feature-card p-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon"><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/robotics-2419719-2040503.png" alt="Autonomous Systems"></div>
+          <h3 class="text-lg sm:text-xl font-semibold mb-4">Autonomous Systems</h3>
+          <p class="text-gray-400">AI-driven automation for efficiency.</p>
+        </div>
+        <div class="feature-card p-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon"><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/ai-security-icon-download-in-svg-png-gif-file-formats--artificial-intelligence-protection-pack-science-technology-icons-10508295.png" alt="AI Security"></div>
+          <h3 class="text-lg sm:text-xl font-semibold mb-4">AI Security</h3>
+          <p class="text-gray-400">Threat detection and protection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Section -->
+  <section id="technology" class="py-16 sm:pt-16 sm:pb-8 relative z-10 px-4 sm:px-6">
+    <div class="max-w-5xl mx-auto w-full text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-12 gradient-text" data-aos="fade-up">Cutting-edge Technology</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-card p-6">
+          <div class="service-icon"><img src="https://img.icons8.com/?size=100&id=bqBDyembTAOT&format=png&color=000000" alt="AI Architecture"></div>
+          <h3 class="text-lg sm:text-xl font-semibold mb-4">Advanced AI Architecture</h3>
+          <p class="text-gray-400">Optimized neural networks for performance.</p>
+        </div>
+        <div class="feature-card p-6">
+          <div class="service-icon"><img src="https://cdn.iconscout.com/icon/free/png-512/free-kubernets-logo-icon-download-in-svg-png-gif-file-formats--company-brand-world-logos-vol-14-pack-icons-283489.png" alt="Scalable Infrastructure"></div>
+          <h3 class="text-lg sm:text-xl font-semibold mb-4">Scalable Infrastructure</h3>
+          <p class="text-gray-400">Cloud-native growth solutions.</p>
+        </div>
+        <div class="feature-card p-6">
+          <div class="service-icon"><img src="https://cdn.brandfetch.io/idVk-klZzr/theme/dark/symbol.svg?c=1bfwsmEH20zzEfSNTed" alt="Enterprise Security"></div>
+          <h3 class="text-lg sm:text-xl font-semibold mb-4">Enterprise Security</h3>
+          <p class="text-gray-400">Military-grade data protection.</p>
+        </div>
+      </div>
+      <div class="mt-12 relative" data-aos="fade-left">
+        <div id="tech-visualization" class="w-full h-40 sm:h-50 rounded-xl bg-surface mx-auto"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-12 sm:pt-8 sm:pb-16 relative z-10 px-4 sm:px-6">
+    <div class="max-w-3xl mx-auto w-full text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-10 gradient-text" data-aos="fade-up">Get in Touch</h2>
+      <p class="text-lg sm:text-xl text-gray-400 mb-12 px-4" data-aos="fade-up" data-aos-delay="100">
+        Ready to transform your business with AI? Let's start a conversation.
+      </p>
+      <form class="contact-form space-y-6 max-w-md mx-auto" data-aos="fade-up">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <input type="text" placeholder="Name" class="w-full">
+          <input type="email" placeholder="Email" class="w-full">
+        </div>
+        <input type="text" placeholder="Company" class="w-full">
+        <textarea rows="4" placeholder="Message" class="w-full"></textarea>
+        <button class="btn-gradient w-full">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative z-10 py-12 bg-surface border-t border-gray-800 text-gray-400 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto w-full">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center sm:text-left">
+          <div class="flex items-center justify-center sm:justify-start space-x-2 mb-6">
+            <div class="w-8 h-8 hexagon bg-gradient-to-br from-primary to-secondary p-1">
+              <img src="assets/logo.png" alt="Logo" class="object-contain w-full h-full brightness-150">
+            </div>
+            <span class="text-lg font-bold gradient-text">NexusCore</span>
+          </div>
+          <p class="text-sm">Pioneering AI and ML solutions.</p>
+        </div>
+        <div class="text-center sm:text-left">
+          <h4 class="text-lg font-semibold mb-4">Solutions</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white transition-colors">Neural Networks</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Predictive Analytics</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Natural Language AI</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Computer Vision</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">AI Security</a></li>
+          </ul>
+        </div>
+        <div class="text-center sm:text-left">
+          <h4 class="text-lg font-semibold mb-4">Company</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div class="text-center sm:text-left">
+          <h4 class="text-lg font-semibold mb-4">Connect</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white transition-colors flex items-center justify-center sm:justify-start gap-2"><svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>Twitter</a></li>
+            <li><a href="#" class="hover:text-white transition-colors flex items-center justify-center sm:justify-start gap-2"><svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a></li>
+            <li><a href="#" class="hover:text-white transition-colors flex items-center justify-center sm:justify-start gap-2"><svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-12 text-sm text-center">© 2025 NexusCore. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
